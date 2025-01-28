@@ -1,0 +1,95 @@
+const qQuestions = [
+    {
+        id: 1,
+        question: "You have just moved to your cozy little farm in Boba Springs. What’s the first thing you want to do now that you’re here?",
+        options: [
+            { text: "Plant a garden full of colorful flowers", flavour: "Matcha" },
+            { text: "Take care of the animals and feed them", flavour: "Black Tea" },
+            { text: "Gather fresh ingredients from the forest for cooking", flavour: "Mango" },
+            { text: "Spend the day exploring the town and meeting people", flavour: "Thai Milk" },
+            { text: "Decorate my cabin to make it more coz", flavour: "Brown Sugar" },
+            { text: "Build something useful for the farm like a new fence or shelter ", flavour: "Taro" },
+        ],
+        type: "MCQs",
+    },
+    {
+        id: 2,
+        question: "The annual town festival is around the corner, and everyone’s excited to celebrate. What’s your role in the festival?",
+        options: [
+            { text: "I’m in charge of setting up the decorations!", flavour: "Taro" },
+            { text: "I’ll be helping with with the food and drink stalls", flavour: "Thai Milk" },
+            { text: "I’m in charge of organising a cozy, quiet corner for everyone to relax", flavour: "Matcha" },
+            { text: "I’ll be setting up a fun game or competition to challenge my friends", flavour: "Mango" },
+            { text: "I’ll be helping with setting up the music or stage for live performances", flavour: "Brown Sugar" },
+            { text: "I think I’ll just attend the event and enjoy it! ", flavour: "Black Tea" },
+        ],
+        type: "MCQs",
+    },
+    {
+        id: 3,
+        question: " You’ve heard there are resources to be gathered in the mines. Do you head over to explore?",
+        options: [
+            { text: "Yes! I’m ready to find treasures and explore!", flavour: "Mango" },
+            { text: "I’ll go, but only if I’m prepared with snacks and a plan", flavour: "Black Tea" },
+            { text: "I’ll take my time and gather only what I need", flavour: "Matcha" },
+            { text: "I’ll explore, but I’ll need a friend by my side for some company", flavour: "Thai Milk" },
+            { text: "I think I’ll stick to gathering herbs or flowers", flavour: "Taro" },
+            { text: "I’d explore, but I’ll go in search of materials to craft something new and fun", flavour: "Brown Sugar" },
+        ],
+        type: "MCQs",
+    },
+    {
+        id: 4,
+        question: "It’s time to pick a new pet for your farm. What do you choose?",
+        options: [
+            { text: "A dog", flavour: "Black Tea" },
+            { text: "A cat", flavour: "Matcha" },
+            { text: "A bunny", flavour: "Taro" },
+            { text: "A bird", flavour: "Thai Milk" },
+            { text: "A guinea pig", flavour: "Brown Sugar" },
+            { text: "A turtle", flavour: "Mango" },
+        ],
+        type: "MCQs",
+    },
+    {
+        id: 5,
+        question: "It’s a rainy afternoon, and you’re feeling cozy indoors. What’s your perfect activity?",
+        options: [
+            { text: "Curl up with a book and sip on a warm drink by the window", flavour: "Matcha" },
+            { text: "Start a new crafting project", flavour: "Taro" },
+            { text: "Invite your friends over to play games or watch a movie", flavour: "Mango" },
+            { text: "Relax with a cup of tea while chatting with neighbor.", flavour: "Black Tea" },
+            { text: "Bake some fresh cookies or cakes to enjoy with everyone", flavour: "Brown Sugar" },
+            { text: "Take a bath or relax in a cozy corner with a hot drink", flavour: "Thai Milk" },
+        ],
+        type: "MCQs",
+    },
+    {
+        id: 6,
+        question: "The town’s bubble tea shop is asking for a special ingredient for their new seasonal flavor! Which do you bring?",
+        options: [
+            { text: "Fresh matcha leaves", flavour: "Matcha" },
+            { text: "Sweet, juicy mangoes", flavour: "Mango" },
+            { text: "Fresh Coconut milk", flavour: "Thai Milk" },
+            { text: "Taro root from the garden", flavour: "Taro" },
+            { text: "Rich brown sugar", flavour: "Brown Sugar" },
+            { text: "Classic tea leaves", flavour: "Black Tea" },
+        ],
+        type: "MCQs",
+    },
+    {
+        id: 7,
+        question: "What’s your mood while sipping on bubble tea, watching the sunset?",
+        options: [
+            { text: "Calm and content, watching the sky change colors", flavour: "Matcha" },
+            { text: "Excited and full of energy after a day of work", flavour: "Mango" },
+            { text: "Cozy and relaxed, wrapped in a warm blanket", flavour: "Brown Sugar" },
+            { text: "Dreamy and nostalgic, remembering fun moments", flavour: "Taro" },
+            { text: "Feeling social, enjoying the evening with friends", flavour: "Thai Milk" },
+            { text: "Peacefully enjoying the quiet evening, reflecting on the day", flavour: "Black Tea" },
+        ],
+        type: "MCQs",
+    },
+]
+
+export default qQuestions;
