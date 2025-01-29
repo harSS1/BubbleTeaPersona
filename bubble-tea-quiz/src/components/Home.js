@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-  background-color: #f7e7b4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,7 +14,7 @@ const HomeContainer = styled.div`
 `;
 
 const StyledButton = styled.button`
-  background-color:rgb(92, 181, 160);
+  background-color:#5cb5a0;
   color: white;
   font-size: 1.2rem;
   padding: 12px 24px;

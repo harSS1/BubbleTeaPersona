@@ -1,6 +1,44 @@
 import { useLocation } from "react-router-dom";
 import pDescriptions from "../data/PersonalityDescriptions";
+import Footer from "./Footer"
+import styled from 'styled-components';
 
+const ResultsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+`;
+
+const ResultImage = styled.img`
+  width: 300px;
+  height: 450px;
+`;
+
+const Description = styled.p`
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 20px;
+`;
+
+const TraitsList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const Trait = styled.li`
+  background-color: #f8f9fa;
+  border-radius: 50px;
+  margin: 5px 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #5cb5a0;
+`;
 
 const Results = () => {
     const location = useLocation();
@@ -14,25 +52,25 @@ const Results = () => {
     const highestFlavour = Object.keys(flavours).find(flavour => flavours[flavour] === maxCount);
 
     const formattedFlavour = highestFlavour.replace(/\s+/g, '');
-    const flavourImage = `/images/${formattedFlavour}.png`
+    const flavourImage = `/images/${formattedFlavour}.png`;
 
-    const { description, traits } = pDescriptions[formattedFlavour] || {}
+    const { description, traits } = pDescriptions[formattedFlavour] || {};
 
     return (
-        <div>
+        <ResultsContainer>
             <h1> Your Bubble Tea Personality is...</h1>
-            <h2> {highestFlavour}</h2>
-            <img src={flavourImage} alt={highestFlavour} />
-            <p> {description}</p>
-            <h3> Traits: </h3>
-            <ul>
+            <h2>{highestFlavour}</h2>
+            <ResultImage src={flavourImage} alt={highestFlavour} />
+            <Description>{description}</Description>
+            {/* <h3>Traits:</h3> */}
+            <TraitsList>
                 {traits.map((trait, index) => (
-                    <li key={index}> {trait}</li>
+                    <Trait key={index}>{trait}</Trait>
                 ))}
-            </ul>
-        </div>
-    )
-
-}
+            </TraitsList>
+            <Footer />
+        </ResultsContainer>
+    );
+};
 
 export default Results;
