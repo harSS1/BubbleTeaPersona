@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import qQuestions from "../data/QuizQuestions";
+import { useNavigate } from 'react-router-dom';
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -12,10 +13,22 @@ const Quiz = () => {
     "Taro": 0,
   });
 
+  const navigate = useNavigate();
+
   const handleAnswer = (flavour) => {
     setAnswers({ ...answers, [flavour]: answers[flavour] + 1 });
     setCurrentQuestionIndex(currentQuestionIndex + 1);
   };
+
+  useEffect(() => {
+    if (currentQuestionIndex === qQuestions.length) {
+      navigate('/results', { state: { flavours: answers } });
+    }
+  }, [currentQuestionIndex, navigate, answers]);
+
+  if (currentQuestionIndex === qQuestions.length) {
+    return null;
+  }
 
   const currentQuestion = qQuestions[currentQuestionIndex];
 
@@ -29,7 +42,6 @@ const Quiz = () => {
       {/* {currentQuestionIndex < qQuestions.length && (
         <p> Question {currentQuestionIndex + 1} of {qQuestions.length}</p>
       )} */}
-
     </div>
   );
 };
