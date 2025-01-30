@@ -1,6 +1,5 @@
 import { useLocation } from "react-router-dom";
 import pDescriptions from "../data/PersonalityDescriptions";
-import Footer from "./Footer"
 import styled from 'styled-components';
 
 const ResultsContainer = styled.div`
@@ -68,7 +67,6 @@ const Results = () => {
                     <Trait key={index}>{trait}</Trait>
                 ))}
             </TraitsList>
-            <Footer />
         </ResultsContainer>
     );
 };

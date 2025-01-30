@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import qQuestions from "../data/QuizQuestions";
 import { useNavigate } from 'react-router-dom';
-import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 
@@ -15,11 +14,12 @@ const QuizContainer = styled.div`
 
 const QuestionBox = styled.div`
   padding: 40px;
-  // border-radius: 10px;
-  // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  // box-shadow: 0px 4px 10px rgba(131, 125, 125, 0.1);
   max-width: 700px;
-  // border: 2px solid #ddd;
-  // background-color:rgb(247, 240, 218);
+  // border: 2px solid white;
+  background:rgb(247, 240, 218);
+
 `;
 
 const QuestionWrapper = styled.div`
@@ -93,7 +93,6 @@ const Quiz = () => {
           Question {currentQuestionIndex + 1} of {qQuestions.length}
         </QuestionCount>
       </QuestionBox>
-      <Footer />
     </QuizContainer>
   );
 };

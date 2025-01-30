@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from "./Footer";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
@@ -44,7 +43,6 @@ const Home = () => {
             <h1>Welcome to the Bubble Tea Personality Quiz!</h1>
             <p>Embark on a fun journey in Boba Springs and discover which bubble tea flavor best matches your personality!</p>
             <StyledButton onClick={startQuiz}>Start Quiz</StyledButton>
-            <Footer />
         </HomeContainer>
     );
 };

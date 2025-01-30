@@ -4,6 +4,8 @@ import Quiz from './components/Quiz';
 import Results from './components/Results';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components';
+import styled from "styled-components";
+import Footer from './components/Footer';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -13,11 +15,16 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
 }
   `;
+  const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
 
 
 function App() {
   return (
-    <div>
+<PageContainer>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
@@ -26,7 +33,8 @@ function App() {
           <Route path="/results" element={<Results />} />
         </Routes>
       </BrowserRouter>
-    </div>
+      <Footer />
+      </PageContainer>
   );
 }
 

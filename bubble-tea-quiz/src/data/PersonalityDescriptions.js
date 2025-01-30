@@ -1,7 +1,7 @@
  export const pDescriptions = {
     Matcha: {
         description: "You’re calm, thoughtful, and love to take your time. You appreciate peaceful moments and always think things through before making decisions. People turn to you for advice, knowing you’ll give them wise, well-considered answers. Sometimes, though, you can be a little too cautious and hesitate when it’s time to take action. But when you do, it’s always with care!",
-        traits: ["Calm", "Thoughtful", "Wise", "Cautious"]
+         traits: ["Calm", "Thoughtful", "Wise", "Cautious"]
     },
     BlackTea: {
         description:"You’re dependable and grounded. When life gets chaotic, you’re the one people turn to for support and guidance. You know how to keep your cool and make sure everything runs smoothly. Your reliability is your biggest strength, and it’s what makes you a favorite among friends. Sometimes, you might feel a bit too comfortable in routine, and breaking out of your comfort zone can be tough. But you always get the job done, and that’s what really matters!",
