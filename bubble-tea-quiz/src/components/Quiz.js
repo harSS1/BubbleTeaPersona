@@ -13,12 +13,11 @@ const QuizContainer = styled.div`
 `;
 
 const QuestionBox = styled.div`
-  padding: 40px;
-  border-radius: 10px;
-  // box-shadow: 0px 4px 10px rgba(131, 125, 125, 0.1);
+  width: 90%;
   max-width: 700px;
-  // border: 2px solid white;
-  background:rgb(247, 240, 218);
+  padding: clamp(20px, 5vw, 40px); //check
+  border-radius: 10px;
+  background: rgb(247, 240, 218);
 
 `;
 

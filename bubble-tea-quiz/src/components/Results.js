@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import pDescriptions from "../data/PersonalityDescriptions";
 import styled from 'styled-components';
 
@@ -33,10 +33,34 @@ const TraitsList = styled.ul`
 const Trait = styled.li`
   background-color: #f8f9fa;
   border-radius: 50px;
-  margin: 5px 10px;
+  margin: 5px 5px;
   padding: 10px 20px;
   font-size: 16px;
   border: 2px solid #5cb5a0;
+`;
+
+const StyledButton = styled.button`
+  background-color:#5cb5a0;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+  
+  a {
+        text-decoration: none;
+        color: inherit;
+    }
 `;
 
 const Results = () => {
@@ -66,7 +90,8 @@ const Results = () => {
                 {traits.map((trait, index) => (
                     <Trait key={index}>{trait}</Trait>
                 ))}
-            </TraitsList>
+        </TraitsList>
+        <Link to = "/"> <StyledButton> Try Again</StyledButton></Link> 
         </ResultsContainer>
     );
 };

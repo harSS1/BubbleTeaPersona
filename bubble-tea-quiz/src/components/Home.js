@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from "styled-components";
 
@@ -29,22 +29,28 @@ const StyledButton = styled.button`
   &:active {
     transform: scale(0.95);
   }
+  
+  a {
+        text-decoration: none;
+        color: inherit;
+    }
+`;
+
+const StyledParagraph = styled.p`
+  max-width: 80%; 
+  line-height: 1.6;
+  word-wrap: break-word;
 `;
 
 const Home = () => {
-    const navigate = useNavigate();
 
-    const startQuiz = () => {
-        navigate("/quiz");
-    };
-
-    return (
-        <HomeContainer>
-            <h1>Welcome to the Bubble Tea Personality Quiz!</h1>
-            <p>Embark on a fun journey in Boba Springs and discover which bubble tea flavor best matches your personality!</p>
-            <StyledButton onClick={startQuiz}>Start Quiz</StyledButton>
-        </HomeContainer>
-    );
+  return (
+    <HomeContainer>
+      <h1>Welcome to the Bubble Tea Personality Quiz!</h1>
+      <StyledParagraph>Embark on a fun journey in Boba Springs and discover which bubble tea flavor best matches your personality!</StyledParagraph>
+      <Link to="/quiz"><StyledButton>Start Quiz</StyledButton> </Link>
+    </HomeContainer>
+  );
 };
 
 export default Home;
