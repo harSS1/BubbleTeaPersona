@@ -5,20 +5,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 
 const QuizContainer = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 `;
 
 const QuestionBox = styled.div`
   width: 90%;
   max-width: 700px;
-  padding: clamp(20px, 5vw, 40px); //check
+  padding: clamp(20px, 5vw, 40px);
   border-radius: 10px;
   background: rgb(247, 240, 218);
-
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
 `;
 
 const QuestionWrapper = styled.div`
@@ -42,7 +42,8 @@ const OptionItem = styled.p`
   transition: all 0.2s ease;
   
   &:hover {
-    background-color: #68c4af;
+    background-color: #b18f6a;
+    color:white;
   }
 `;
 
@@ -88,7 +89,7 @@ const Quiz = () => {
             {option.text}
           </OptionItem>
         ))}
-          <QuestionCount>
+        <QuestionCount>
           Question {currentQuestionIndex + 1} of {qQuestions.length}
         </QuestionCount>
       </QuestionBox>

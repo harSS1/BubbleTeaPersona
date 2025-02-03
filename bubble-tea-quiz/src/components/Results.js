@@ -8,12 +8,27 @@ const ResultsContainer = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
+  flex: 1; 
 `;
 
 const ResultImage = styled.img`
-  width: 300px;
+  width: auto;
   height: 450px;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 `;
 
 const Description = styled.p`
@@ -36,11 +51,18 @@ const Trait = styled.li`
   margin: 5px 5px;
   padding: 10px 20px;
   font-size: 16px;
-  border: 2px solid #5cb5a0;
+  border: 2px solid #b18f6a;
 `;
 
+const FlavourTitle = styled.h2`
+  color: ${(props) => props.color || "#000000"};
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+`;
+
+
 const StyledButton = styled.button`
-  background-color:#5cb5a0;
+  background-color:#b18f6a;
   color: white;
   font-size: 1.2rem;
   padding: 10px 20px;
@@ -48,6 +70,7 @@ const StyledButton = styled.button`
   border-radius: 50px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  margin-bottom: 10px;
 
   &:hover {
     transform: scale(1.05);
@@ -77,15 +100,14 @@ const Results = () => {
     const formattedFlavour = highestFlavour.replace(/\s+/g, '');
     const flavourImage = `/images/${formattedFlavour}.png`;
 
-    const { description, traits } = pDescriptions[formattedFlavour] || {};
+    const { description, traits, color } = pDescriptions[formattedFlavour] || {};
 
     return (
         <ResultsContainer>
             <h1> Your Bubble Tea Personality is...</h1>
-            <h2>{highestFlavour}</h2>
+            <FlavourTitle color={color}>{highestFlavour}</FlavourTitle>
             <ResultImage src={flavourImage} alt={highestFlavour} />
             <Description>{description}</Description>
-            {/* <h3>Traits:</h3> */}
             <TraitsList>
                 {traits.map((trait, index) => (
                     <Trait key={index}>{trait}</Trait>

@@ -4,16 +4,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-  min-height: 100vh;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 20px;
 `;
 
 const StyledButton = styled.button`
-  background-color:#5cb5a0;
+  background-color:#b18f6a;
   color: white;
   font-size: 1.2rem;
   padding: 12px 24px;
@@ -36,17 +37,20 @@ const StyledButton = styled.button`
     }
 `;
 
+const StyledHeading = styled.h1`
+  margin-bottom: 15px;
+`;
+
 const StyledParagraph = styled.p`
-  max-width: 80%; 
-  line-height: 1.6;
-  word-wrap: break-word;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 `;
 
 const Home = () => {
 
   return (
     <HomeContainer>
-      <h1>Welcome to the Bubble Tea Personality Quiz!</h1>
+      <StyledHeading> Welcome to the Bubble Tea Personality Quiz!</StyledHeading>
       <StyledParagraph>Embark on a fun journey in Boba Springs and discover which bubble tea flavor best matches your personality!</StyledParagraph>
       <Link to="/quiz"><StyledButton>Start Quiz</StyledButton> </Link>
     </HomeContainer>

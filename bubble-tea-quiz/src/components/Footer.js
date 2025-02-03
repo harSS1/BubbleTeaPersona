@@ -6,7 +6,7 @@ const StickyFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #68c4af;
+  background-color: #b18f6a;
   color: white;
   text-align: center;
 `;
