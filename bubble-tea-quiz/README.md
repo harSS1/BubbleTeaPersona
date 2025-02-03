@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# React Bubble Tea Personality Quiz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React app for a Bubble Tea Quiz. The app is designed for personal use only and should not be used for commercial purposes.
 
-## Available Scripts
+## Description
+The **Bubble Tea Personality Quiz** allows users to answer questions to find out what bubble tea flavour best suits their personality. It is an interactive quiz built with **React** and styled using **styled-components**.
 
-In the project directory, you can run:
+## App Structure
+The app consists of the following components and data files:
 
-### `npm start`
+### Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Footer.js**  
+   This component is displayed across all pages of the app. It provides consistent footer information, including copyright details and credits.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Home.js**  
+   The initial page of the app, introducing the quiz and providing the user with an option to start the quiz.
 
-### `npm test`
+3. **Quiz.js**  
+   The main part of the app, where users are presented with a series of 12 questions. Each question has multiple-choice options that help determine the user’s bubble tea personality based on their answers. The results are tracked, and once the quiz is completed, the user is directed to the **Results** page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Result.js**  
+   This component displays the outcome of the quiz, showing the user's matched bubble tea flavor. It presents an image of the chosen flavor, a description explaining why it fits the user's personality, and a list of relevant personality traits.
 
-### `npm run build`
+### Data
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **PersonalityDescription.js**  
+   This file includes descriptions for various bubble tea flavors, which align with specific personality traits.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. **QuizQuestions.js**  
+   Contains the list of questions and multiple-choice options for the quiz, designed to gather information about the user’s personality.
